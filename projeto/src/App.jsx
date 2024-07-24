@@ -1,24 +1,24 @@
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import './App.css';
+import Home from './pages/Home';
+import Login from './pages/Login';
+
 function App() {
-  const [users, setUsers] = useState([])
-
-  useEffect(() => {
-    console.log('Componente iniciado')
-    async function fetchData() {
-      const response = await getUsers()
-      setUsers(response)
-    }
-    
-    fetchData()
-  }, [])
-
-
   return (
-    <>
-      {users.map(
-        user => <span key={user.id}>{user.name} ({user.email})</span>
-      )}
-    </>
-  )
+    <Router>
+      <div className="App">
+        <Switch>
+          <Route path="/login">
+            <Login />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
 }
 
-export default App
+export default App;
