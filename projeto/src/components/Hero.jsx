@@ -1,11 +1,11 @@
 import React from "react";
 
 function Hero(){
-    return(
-        <hero className="hero">
-            <h2>Area Hero do ze</h2>
-        </hero>
-    )
+    return (
+        <div className="hero">
+            <h2>Area Hero do Ze</h2>
+        </div>
+    );
 }
 
-export default Hero; 
+export default Hero;

@@ -1,23 +1,16 @@
-import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
-import Home from './pages/Home';
-import Login from './pages/Login';
+import RoutesComponent from './routes/RoutesComponent';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <Switch>
-          <Route path="/login">
-            <Login />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+    <>
+      {/* Adiciono o Router (BrowserRouter) para mostrar ao React que minha aplicação possui rotas */}
+      <Router>
+        {/* Carrego o componente onde defino as rotas */}
+        <RoutesComponent />
+      </Router>
+    </>
   );
 }
 
